@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     const supplyName = document.getElementById("supplyName").value;
     console.log(`Procurando preço de ${supplyName}`);
-    fetch("/data/sinapi_go_2024_05.json")
+    fetch("https://pitossomo.github.io/custodeobra/data/sinapi_go_2024_05.json")
       .then((response) => response.json())
       .then((data) => {
         console.log(data[0]);
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Criando insumos");
   const selectElement = document.getElementById("supplyName");
 
-  fetch("/data/sinapi_go_2024_05.json")
+  fetch("https://pitossomo.github.io/custodeobra/data/sinapi_go_2024_05.json")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((supply) => {
